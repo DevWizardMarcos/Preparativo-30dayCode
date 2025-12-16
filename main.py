@@ -3,7 +3,7 @@ produtos = {}
 def adcionar():
         while True :
             nome = input('Digite o nome do produto : ')
-            quantidade = int(input('Digite a quantidade do pr1duto : '))
+            quantidade = int(input('Digite a quantidade do produto : '))
             valor = float(input('Digite o valor do produto : '))
             produtos [nome] = {
                 'quantidade' : quantidade,
@@ -34,8 +34,7 @@ def atualizar():
                   produtos[nome]['valor']=novoValor
                   return f'o produto {nome} foi atualizado com sucesso '
             else:
-                return 'produto não encontrado'            
-            
+                return 'produto não encontrado'              
 
 def remover():
     removerPrduto = input('Deseja remover algum produto ? ').lower()
@@ -50,7 +49,14 @@ def remover():
 
 if __name__ == '__main__':
         adcionar()
+
+        print('=' * 30 )
+
         atualizar()
+
+        print('=' * 30 )
+
         remover()
+        
         print(produtos)
         print(f'Valor total gasto: R$ {valores():.2f}')
